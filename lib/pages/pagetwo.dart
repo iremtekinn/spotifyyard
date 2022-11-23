@@ -19,7 +19,11 @@ class _PagetwoState extends State<Pagetwo> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                color:Colors.red,
+                color:Color(0xff42C83C),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(80),
+                  bottomLeft: Radius.circular(80),
+                )
                 
                 ),
                 child: Row(
@@ -35,13 +39,30 @@ class _PagetwoState extends State<Pagetwo> {
                 height: 240,
                 
               ),
-              SizedBox(height:2),
+              SizedBox(height:8),
               Container(
-                width: double.infinity,
-                height: 20,
+                width: 300,
+                height: 150,
                 color:Colors.blue,
-                child: Text("Billie Eilish",textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold),),
+                child: Column(
+                  children: [
+                    Text("Billie Eilish",textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                    Text("2 Albums, 67 track",textAlign: TextAlign.center, style: TextStyle(color:Color(0xff838383),fontSize: 16)),
+                    Text("Lorem ıpsum dolar sit amet,consectur adipscising elit turpis adipsiciosing vestribium orici enim nasture viatere",textAlign: TextAlign.center, style: TextStyle(color:Color(0xff838383),fontSize: 16))
+                  ],
+                ),
+
+              ),
+              SizedBox(height:4),
+              Container(
+                padding: EdgeInsets.only(left:20),
+                width:double.infinity,
+                height:40,
+                color:Colors.yellow,
+                child: Text("Albums",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
               )
+              
+              
             ],
           ),
         ),
