@@ -37,11 +37,11 @@ class _PageOneState extends State<PageOne> {
                 Otextone(),
                 SizedBox(height: 2,),
                 Consumer(
-                  builder:(context, MusicProvider aa, child) => aa?.isLoading==true?CircularProgressIndicator():
+                  builder:(context, MusicProvider aa, child) => aa.isLoading==true?CircularProgressIndicator():
                    Container(
                       width:MediaQuery.of(context).size.width,
                       height:MediaQuery.of(context).size.height,
-                      color:Colors.red,
+                      color:Colors.grey.shade200,
                       child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         childAspectRatio: 3/2,
@@ -51,10 +51,21 @@ class _PageOneState extends State<PageOne> {
                         itemCount: aa.response.categories!.items!.length,
                         itemBuilder: (context, index) {
                           return Container(
+                            decoration: BoxDecoration(
+                              color:Colors.blue,
+                             image:DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(aa.response.categories!.items![index].icons![0].url.toString()))
+                            ),
                             width:80,
-                            height: 80,
-                            color:Colors.blue,
-                            child: Text(aa.response.categories!.items![index].name.toString()),
+                            height:80,
+                            
+                            child: Column(
+                              children: [
+                                Text(aa.response.categories!.items![index].name.toString(),style: TextStyle(color:Color(0xff42C83C)),),
+                               
+                              ],
+                            ),
                           );
                         },
                         ),

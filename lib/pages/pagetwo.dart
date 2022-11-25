@@ -51,6 +51,7 @@ class _PagetwoState extends State<Pagetwo> {
                         Navigator.push(context,MaterialPageRoute(builder: ((context) => PageOne())));
                       },
                       child: Icon(Icons.arrow_back)),
+                      Image.asset("assets/twolist.png"),
                     Icon(Icons.more_vert_sharp)
                   ],
                 ),
@@ -128,7 +129,7 @@ class _PagetwoState extends State<Pagetwo> {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color:Colors.blue,
+                            color:Color(0xffE6E6E6),
                             ),
                           width:30,
                           height: 30,

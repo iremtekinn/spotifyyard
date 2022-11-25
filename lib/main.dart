@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spotify_yard/pages/pageone.dart';
 import 'package:flutter_spotify_yard/pages/pagethree.dart';
 import 'package:flutter_spotify_yard/pages/pagetwo.dart';
+import 'package:flutter_spotify_yard/provider/music2_provider.dart';
+import 'package:flutter_spotify_yard/provider/music3_provider.dart';
 import 'package:flutter_spotify_yard/provider/music_procider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
     MultiProvider(providers: [
-      ChangeNotifierProvider<MusicProvider>(create:(_)=>MusicProvider() )
+      ChangeNotifierProvider<MusicProvider>(create:(_)=>MusicProvider() ),
+      ChangeNotifierProvider<Music2Provider>(create:(_)=>Music2Provider() ),
+      ChangeNotifierProvider<Music3Provider>(create:(_)=>Music3Provider() ),
     ],child:const MyApp())
     );
 }
