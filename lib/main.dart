@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spotify_yard/pages/fourth.dart';
 import 'package:flutter_spotify_yard/pages/pageone.dart';
 import 'package:flutter_spotify_yard/pages/pagethree.dart';
 import 'package:flutter_spotify_yard/pages/pagetwo.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Pagethree(),
+      home: const Fourth(),
     );
   }
 }
