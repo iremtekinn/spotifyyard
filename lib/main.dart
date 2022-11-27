@@ -5,6 +5,7 @@ import 'package:flutter_spotify_yard/pages/pagethree.dart';
 import 'package:flutter_spotify_yard/pages/pagetwo.dart';
 import 'package:flutter_spotify_yard/provider/music2_provider.dart';
 import 'package:flutter_spotify_yard/provider/music3_provider.dart';
+import 'package:flutter_spotify_yard/provider/music4_provider.dart';
 import 'package:flutter_spotify_yard/provider/music_procider.dart';
 import 'package:provider/provider.dart';
 
@@ -14,6 +15,8 @@ void main() {
       ChangeNotifierProvider<MusicProvider>(create:(_)=>MusicProvider() ),
       ChangeNotifierProvider<Music2Provider>(create:(_)=>Music2Provider() ),
       ChangeNotifierProvider<Music3Provider>(create:(_)=>Music3Provider() ),
+      ChangeNotifierProvider<Music4Provider>(create:(_)=>Music4Provider() ),
+
     ],child:const MyApp())
     );
 }

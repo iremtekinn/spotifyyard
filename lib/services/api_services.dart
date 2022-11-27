@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 
 import '../models/music2_response.dart';
 import '../models/music3_response.dart';
+import '../models/music4_response.dart';
 import '../models/music_response.dart';
 
 final Dio _dio=Dio(BaseOptions(
@@ -63,6 +64,29 @@ final Dio _dio=Dio(BaseOptions(
     try{
       final response =await _dio.get("users/31ou32ihswad2dohj6rgd3hp7gla");
       musicResponse=Music3Response.fromJson(response.data);
+      
+      print(response.data);
+      return musicResponse;
+    }
+    catch(e){
+     
+    }
+     return null;
+  }
+
+  final Dio _dio4=Dio(BaseOptions(
+  baseUrl:"https://api.spotify.com/v1/",
+  headers: {
+    "Authorization":"Bearer BQCam-Hgjo03V6c4ve8VQ5wG-ADj-YybCTCQh3eRr51XU9jBUMubz_vXymuK6Hob6ROdKKttzOqlscL83erhPu94mkGkqhTU8uKnjkAX8JSfkOTVENYWdLb1ST2XJ8ZxNY0ido_WU_aj9F6kG9Fd1SLi_bePtqTE8FHTu_y9U6DRqKeB0SeEEZT6_SGH7f0qrpBt8LWUW5c8m8o7rSyt-j7mS6X16Gurc7biwC49FAOBknsK-mZFWgXyyaGC1yLQUDUEQujTUcDHm-QWFPp42HPD_PjacSqkEL8Yn3Zito7c"
+  },
+  connectTimeout:5000,
+  receiveTimeout:3000));
+ 
+  Future<Music4Response?> getCurrent4Data()async{
+    Music4Response musicResponse;
+    try{
+      final response =await _dio.get("artists/0TnOYISbd1XYRBk9myaseg/albums?include_groups=single%2Cappears_on&market=ES&limit=10&offset=5");
+      musicResponse=Music4Response.fromJson(response.data);
       
       print(response.data);
       return musicResponse;
