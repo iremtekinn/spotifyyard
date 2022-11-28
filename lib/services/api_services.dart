@@ -3,12 +3,14 @@ import 'package:dio/dio.dart';
 import '../models/music2_response.dart';
 import '../models/music3_response.dart';
 import '../models/music4_response.dart';
+import '../models/music5_response.dart';
+import '../models/music6_response.dart';
 import '../models/music_response.dart';
 
 final Dio _dio=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQB5dUg6IKpi3Yc3X5DtOTSnmPs5OtjD6q-204OTvHAhCgSFSU3bOGf4UO5_lKHoaYKARHZxPLc8QDQ8pweUrQokUPYfJcqvIxInRm3cv5E8WtaHucUKhVZ002TmR2IxZ_1UfkctZLet91ueVOM1XqRwgnqvdoTzFEFOrdBqOA8JXrHvCkFQIgIb5ck1dN551hCqSHV0MDiHJiYSZSZ7WuA_0mumcLAeZgY9KKFiTV58Lyqo95O8qORRlQxqWJiIR1JehZAEklar626YmdLVgy4e4HYFbdGOyOGd5JGVAqIy"
+    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -32,7 +34,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio2=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQD-hms-BDNyAFSAdIQP7s814vj3gdsbBx57Ia80LQP4C05ra1M_O_Rw1aKM66ia3Q7-A5jF3x2in26jJyViUXDWxOf6oMLDpxwwa8W5t8Na_Ib_G3-Zn9eO7wCLFM1uqBiPJi4CbcN_LC0-XX6jIBWF5tlqBXDCBYYckgslaEn7HS6vs-mZT8mozl6y4383GAVAhR5vWyhciMjHnQZ3N5aqeUMkdRpQvXMAY9Cr8eXfGm28Z8ds2vBk_N98T-NBEQGiNm9uvlDYYnFRfAB1Y4iG1Ob_EREBlGMtdt8bpYh3qxhB3b8WrxM"
+    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -54,7 +56,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio3=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQBe_0xGkn4aRnGrxLJDDmz3l4uOeipf2KH0E_O9WXnkxPZczxSc23WTPcB9epftWwggKeeFhpA0C3ltjKEV6N3DFILM663B7y0Ry8YOO_Da4sUHh5Zu1SUFOqNBj4lT7X790FE1AFppd9f2HxvzZH45f3u8dwqC4QMAswDoSzxEFbNfdDr2LYH_hYTDoJmon1sO4JgP_NC6_WBsYmbkhFveg4MfAE5lDk5hph_GNj6sFrhY-Xz1S9dDzv7gu4_hNnX8slILznj5ksTLZSE_5raM74JFf7vwzX3BiVrGTN4b"
+    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -74,10 +76,10 @@ final Dio _dio=Dio(BaseOptions(
      return null;
   }
 
-  final Dio _dio4=Dio(BaseOptions(
+  final Dio _dio4=Dio(BaseOptions(//olmadı deneme bunu çağırmadım hiçbir sayfada
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQCam-Hgjo03V6c4ve8VQ5wG-ADj-YybCTCQh3eRr51XU9jBUMubz_vXymuK6Hob6ROdKKttzOqlscL83erhPu94mkGkqhTU8uKnjkAX8JSfkOTVENYWdLb1ST2XJ8ZxNY0ido_WU_aj9F6kG9Fd1SLi_bePtqTE8FHTu_y9U6DRqKeB0SeEEZT6_SGH7f0qrpBt8LWUW5c8m8o7rSyt-j7mS6X16Gurc7biwC49FAOBknsK-mZFWgXyyaGC1yLQUDUEQujTUcDHm-QWFPp42HPD_PjacSqkEL8Yn3Zito7c"
+    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -97,6 +99,58 @@ final Dio _dio=Dio(BaseOptions(
      return null;
   }
 
+//https://developer.spotify.com/console/get-artist/?id=0TnOYISbd1XYRBk9myaseg
+  final Dio _dio5=Dio(BaseOptions(
+  baseUrl:"https://api.spotify.com/v1/",
+  headers: {'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer BQAa1DqTLafRdjoyc5qE-bL1BZWGmZvKzX5GNbE3X9l7UOuras-IBxsk40gg3JX3AllURF3tYITWkdcRDNow_BcbOhmKIajosHCHzdCMK1zMMQAikuBzUtGqEV9jjpDVkF9hsINNZwGTIZ52t60tmEnuoHAQx12Xbmn50Q_m_jUtEz16dtLh5hIR4CyIsF-du_hrLBH-YRdw-IwIhAxlGgmQ9kK4nm8AsdyadjerIdCy5prZuq-bT6culgahWWoeT9u5pyiEMICJZeD4FIMgRB-IBJq6P0vVg4H2GJlCuSXS',
+   },
+  connectTimeout:5000,
+  receiveTimeout:3000));
+ 
+  Future<Music5Response?> getCurrent5Data()async{
+
+
+
+    
+    Music5Response musicResponse;
+    try{
+      final response =await _dio5.get("artists/0TnOYISbd1XYRBk9myaseg");
+      musicResponse=Music5Response.fromJson(response.data);
+      
+      print(response.data);
+      return musicResponse;
+    }
+    catch(e){
+     
+    }
+     return null;
+  }
+
+//https://developer.spotify.com/console/get-artist-albums/?id=0TnOYISbd1XYRBk9myaseg&include_groups=single%2Cappears_on&market=ES&limit=10&offset=5
+  final Dio _dio6=Dio(BaseOptions(
+  baseUrl:"https://api.spotify.com/v1/",
+  headers: {
+    "Authorization":"Bearer BQAa1DqTLafRdjoyc5qE-bL1BZWGmZvKzX5GNbE3X9l7UOuras-IBxsk40gg3JX3AllURF3tYITWkdcRDNow_BcbOhmKIajosHCHzdCMK1zMMQAikuBzUtGqEV9jjpDVkF9hsINNZwGTIZ52t60tmEnuoHAQx12Xbmn50Q_m_jUtEz16dtLh5hIR4CyIsF-du_hrLBH-YRdw-IwIhAxlGgmQ9kK4nm8AsdyadjerIdCy5prZuq-bT6culgahWWoeT9u5pyiEMICJZeD4FIMgRB-IBJq6P0vVg4H2GJlCuSXS"
+  },
+  connectTimeout:5000,
+  receiveTimeout:3000));
+ 
+  Future<Music6Response?>getCurrent6Data()async{
+    Music6Response musicResponse;
+    try{
+      final response =await _dio6.get("artists/0TnOYISbd1XYRBk9myaseg/albums?include_groups=single%2Cappears_on&market=ES&limit=10&offset=5");
+      musicResponse=Music6Response.fromJson(response.data);
+      
+      
+      return musicResponse;
+    }
+    catch(e){
+     
+    }
+     return null;
+  }
 
 
 

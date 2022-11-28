@@ -4,6 +4,10 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_spotify_yard/pages/pageone.dart';
 import 'package:flutter_spotify_yard/pages/pagethree.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/music5_provider.dart';
+import '../provider/music6_provider.dart';
 
 class Pagetwo extends StatefulWidget {
   const Pagetwo({super.key});
@@ -13,6 +17,13 @@ class Pagetwo extends StatefulWidget {
 }
 
 class _PagetwoState extends State<Pagetwo> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    Provider.of<Music5Provider>(context,listen: false).getMusic5Data(context);
+    Provider.of<Music6Provider>(context,listen: false).getMusic6Data(context);
+    super.initState();
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -34,7 +45,24 @@ class _PagetwoState extends State<Pagetwo> {
                   child:Stack(
                        children: [
                         Positioned(
-                          right:2,child: Image.asset("assets/b3.png")),
+                          right:2,
+                          //child: Image.asset("assets/b3.png")
+                          child: Consumer(
+                            builder:(context,Music5Provider a5,child)=>a5.isLoading==true?CircularProgressIndicator():
+                            //child: 
+                            Container(
+                              width:390,
+                              height: 240,
+                              decoration: BoxDecoration(
+                                color:Colors.blue,
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(fit: BoxFit.cover,
+                                  image:NetworkImage(a5.response!.images![0].url.toString()) )
+                              ),
+                              //child: Image.network(a5.response!.images![0].url.toString())
+                              )
+                              ),
+                          ),
                           Positioned(
                             top:30,left:40,child: Container(
                               width:30,
@@ -63,9 +91,18 @@ class _PagetwoState extends State<Pagetwo> {
                  // color:Colors.blue,
                   child: Column(
                     children: [
-                      Text("Billie Eilish",textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-                      Text("2 Albums, 67 track",textAlign: TextAlign.center, style: TextStyle(color:Color(0xff838383),fontSize: 16)),
-                      Text("Lorem ıpsum dolar sit amet,consectur adipscising elit turpis adipsiciosing vestribium orici enim nasture viatere",textAlign: TextAlign.center, style: TextStyle(color:Color(0xff838383),fontSize: 16))
+                      Consumer(
+                        builder:(context,Music5Provider a5,child)=>a5.isLoading==true?CircularProgressIndicator():
+                        //child: 
+                        Text(a5.response!.name!.toString(),textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
+                      Consumer(
+                        builder:(context,Music5Provider a5,child)=>a5.isLoading==true?CircularProgressIndicator():
+                       // child: 
+                        Text(a5.response!.popularity!.toString(),textAlign: TextAlign.center, style: TextStyle(color:Color(0xff838383),fontSize: 16))),
+                      Consumer(
+                         builder:(context,Music5Provider a5,child)=>a5.isLoading==true?CircularProgressIndicator():
+                        //child: 
+                        Text(a5.response!.genres![0].toString(),textAlign: TextAlign.center, style: TextStyle(color:Color(0xff838383),fontSize: 16)))
                     ],
                   ),
               
@@ -80,28 +117,38 @@ class _PagetwoState extends State<Pagetwo> {
                 child: Text("Albums",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
               ),
               Bounce(duration: Duration(seconds: 4),
-                child: Container(
-                  width:double.infinity,
-                  height:150,
-                  //color:Colors.red,
-                  child: ListView.builder(itemCount: 5,
-                  scrollDirection: Axis.horizontal,itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            width:100,
-                            height:100,
-                            //color:Colors.blue,
-                            child: Image.asset("assets/twolist.png"),
-                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                child: Consumer(
+                  builder:(context,Music6Provider a6,child)=>a6.isLoading==true?CircularProgressIndicator():
+                  //child:
+                   Container(
+                    width:double.infinity,
+                    height:150,
+                    //color:Colors.red,
+                    child: ListView.builder(itemCount: a6.response?.items?.length,
+                    scrollDirection: Axis.horizontal,itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child:
+                              Container(
+                                width:100,
+                                height:100,
+                                //color:Colors.blue,
+                                //child: Image.asset("assets/twolist.png"),
+                                decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
+                                image:DecorationImage(image: NetworkImage(a6.response!.items![index].images![0].url.toString()))
+                                ),
+                                
+                              ),
+                            
                           ),
-                        ),
-                        Text("dhfgjfgıreh")
-                      ],
-                    );
-                  },),
+                          //Text("dhfgjfgıreh")
+                          Text(a6.response!.items![index].artists![0].name!.toString())
+                        ],
+                      );
+                    },),
+                  ),
                 ),
               ),
               Container(
