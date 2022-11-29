@@ -13,7 +13,7 @@ import '../models/music_response.dart';
 final Dio _dio=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -37,7 +37,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio2=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -59,7 +59,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio3=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -82,7 +82,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio4=Dio(BaseOptions(//olmadı deneme bunu çağırmadım hiçbir sayfada
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQBCbM1yE65_buhbwAHFJLSfkMD3Q2Is6V3TgXE61f3MWtXZ8KNcW2hk3ImQPGM6fP-ODIuL7G2Z4uBbR2Uyv63WFjGeGE3cDvCjd-GYNIqehgiYOUPN-0nezdWBomdjNTpYvlO04FIzM1yczdDoHs7PqTmd46yylESFwIZKZpnYCYx8ifbGh1L-3tE7UlTsph43ali0bF0Tr4VCwd3fDrU2_kzfFfuS_U2CbeiBIDbb932bIq3VA4EedOhnWggONh8fG0mVQc6QfWkIsS2xbCNT7BlLZqrhL9nEFyMqNxsE"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -108,7 +108,7 @@ final Dio _dio=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer BQAb9QrNfZDsnmT89zGFepg4BLEmRHIWLZsoYaxf0du7pbAIIjTzwqU3wERSI7wjPWQPclzbcLJ63GQ266gbpwYSnGCrYSMYBgY1iJnXXMke1cFYpk-tdfAkPJQ92GTgivXaari0xInp3pYZQy25agIHgjyGETAt8C18GQ30Eajt3fCA5S5Bd6QcE6LGB3ZSoipQqxzmrh2_jbrMpnYSbc0kERMz0xooH3QPQt0URLgzC-pjQCterEsSiqlIimxrmXP_fhvrR15mJwqX1QV0aXAW0WAsLslwLpt6CKt4d4R1',
+    'Authorization': 'Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE',
    },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -137,7 +137,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio6=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQAb9QrNfZDsnmT89zGFepg4BLEmRHIWLZsoYaxf0du7pbAIIjTzwqU3wERSI7wjPWQPclzbcLJ63GQ266gbpwYSnGCrYSMYBgY1iJnXXMke1cFYpk-tdfAkPJQ92GTgivXaari0xInp3pYZQy25agIHgjyGETAt8C18GQ30Eajt3fCA5S5Bd6QcE6LGB3ZSoipQqxzmrh2_jbrMpnYSbc0kERMz0xooH3QPQt0URLgzC-pjQCterEsSiqlIimxrmXP_fhvrR15mJwqX1QV0aXAW0WAsLslwLpt6CKt4d4R1"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -162,7 +162,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio7=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQAb9QrNfZDsnmT89zGFepg4BLEmRHIWLZsoYaxf0du7pbAIIjTzwqU3wERSI7wjPWQPclzbcLJ63GQ266gbpwYSnGCrYSMYBgY1iJnXXMke1cFYpk-tdfAkPJQ92GTgivXaari0xInp3pYZQy25agIHgjyGETAt8C18GQ30Eajt3fCA5S5Bd6QcE6LGB3ZSoipQqxzmrh2_jbrMpnYSbc0kERMz0xooH3QPQt0URLgzC-pjQCterEsSiqlIimxrmXP_fhvrR15mJwqX1QV0aXAW0WAsLslwLpt6CKt4d4R1"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -187,7 +187,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio8=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQBjsSo1jRryxP-B7KJiD_25UvFuirpqk_jRQAYzyjtmPIJmZEPeXz-loD0zvxUIz_F_ZD_ESjrrTClb0Ml29lVMiVa9yLRK_gHdB93dfFdT8G4vFm0btw6TagSH-EZKNzoluI24hLUoZ9aYkUxNiMJdu4uouB8CCtFjZJQxMdeVksmfCkZcpXNS2DQYHUSL2_uJCAiBecoKxdxN0f05xAeefGd_xG1lX1BZZrLfDbYFpMc75Mnpj17pfjjVr9OGK0N_bikDaO8kw1Uy4w9mPFU9rv63GWWjoP7NU31B4RcC"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -212,7 +212,7 @@ final Dio _dio=Dio(BaseOptions(
   final Dio _dio9=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQBjsSo1jRryxP-B7KJiD_25UvFuirpqk_jRQAYzyjtmPIJmZEPeXz-loD0zvxUIz_F_ZD_ESjrrTClb0Ml29lVMiVa9yLRK_gHdB93dfFdT8G4vFm0btw6TagSH-EZKNzoluI24hLUoZ9aYkUxNiMJdu4uouB8CCtFjZJQxMdeVksmfCkZcpXNS2DQYHUSL2_uJCAiBecoKxdxN0f05xAeefGd_xG1lX1BZZrLfDbYFpMc75Mnpj17pfjjVr9OGK0N_bikDaO8kw1Uy4w9mPFU9rv63GWWjoP7NU31B4RcC"
+    "Authorization":"Bearer BQCsnY8EDYxr24KOUzF1dZflRP_hUJPJ_UtX5IKzthnnFH2PrkF_JLw4fy575E7392c7mSzTBuap8gv_ep79Gx-QBeIDVupbrHA_ZgDXaTQT2JALMOhTiNH9ZTRl6USgSGDWX9ozdUaMVw13lc0FfG3IYodMG2EmUiLHXkEn7jtQbqO_Y1T75MPSs8YkjLRnr49yivfNsRpcmuz5HK5Wnf27zbE5H1ZumzthjLXrXb4_lhZk4F1vVMgE5W0dhK29WmzRZ56No5M1vExXSwW7IgJslS4_JWFBzcB4gy9gwNjE"
   },
   connectTimeout:5000,
   receiveTimeout:3000));

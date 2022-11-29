@@ -129,7 +129,7 @@ class _PagethreeState extends State<Pagethree> {
               child: Container(
                   width: double.infinity,
                   height: 20,
-                  color: Colors.yellow,
+                  //color: Colors.yellow,
                   child: Text(
                     "PUBLIC PLAYLIST",
                     textAlign: TextAlign.left,
