@@ -5,6 +5,9 @@ import '../models/music3_response.dart';
 import '../models/music4_response.dart';
 import '../models/music5_response.dart';
 import '../models/music6_response.dart';
+import '../models/music7_response.dart';
+import '../models/music8_response.dart';
+import '../models/music9_reponse.dart';
 import '../models/music_response.dart';
 
 final Dio _dio=Dio(BaseOptions(
@@ -100,11 +103,12 @@ final Dio _dio=Dio(BaseOptions(
   }
 
 //https://developer.spotify.com/console/get-artist/?id=0TnOYISbd1XYRBk9myaseg
+//pagetwo
   final Dio _dio5=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer BQAa1DqTLafRdjoyc5qE-bL1BZWGmZvKzX5GNbE3X9l7UOuras-IBxsk40gg3JX3AllURF3tYITWkdcRDNow_BcbOhmKIajosHCHzdCMK1zMMQAikuBzUtGqEV9jjpDVkF9hsINNZwGTIZ52t60tmEnuoHAQx12Xbmn50Q_m_jUtEz16dtLh5hIR4CyIsF-du_hrLBH-YRdw-IwIhAxlGgmQ9kK4nm8AsdyadjerIdCy5prZuq-bT6culgahWWoeT9u5pyiEMICJZeD4FIMgRB-IBJq6P0vVg4H2GJlCuSXS',
+    'Authorization': 'Bearer BQAb9QrNfZDsnmT89zGFepg4BLEmRHIWLZsoYaxf0du7pbAIIjTzwqU3wERSI7wjPWQPclzbcLJ63GQ266gbpwYSnGCrYSMYBgY1iJnXXMke1cFYpk-tdfAkPJQ92GTgivXaari0xInp3pYZQy25agIHgjyGETAt8C18GQ30Eajt3fCA5S5Bd6QcE6LGB3ZSoipQqxzmrh2_jbrMpnYSbc0kERMz0xooH3QPQt0URLgzC-pjQCterEsSiqlIimxrmXP_fhvrR15mJwqX1QV0aXAW0WAsLslwLpt6CKt4d4R1',
    },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -129,10 +133,11 @@ final Dio _dio=Dio(BaseOptions(
   }
 
 //https://developer.spotify.com/console/get-artist-albums/?id=0TnOYISbd1XYRBk9myaseg&include_groups=single%2Cappears_on&market=ES&limit=10&offset=5
+//pagetwo
   final Dio _dio6=Dio(BaseOptions(
   baseUrl:"https://api.spotify.com/v1/",
   headers: {
-    "Authorization":"Bearer BQAa1DqTLafRdjoyc5qE-bL1BZWGmZvKzX5GNbE3X9l7UOuras-IBxsk40gg3JX3AllURF3tYITWkdcRDNow_BcbOhmKIajosHCHzdCMK1zMMQAikuBzUtGqEV9jjpDVkF9hsINNZwGTIZ52t60tmEnuoHAQx12Xbmn50Q_m_jUtEz16dtLh5hIR4CyIsF-du_hrLBH-YRdw-IwIhAxlGgmQ9kK4nm8AsdyadjerIdCy5prZuq-bT6culgahWWoeT9u5pyiEMICJZeD4FIMgRB-IBJq6P0vVg4H2GJlCuSXS"
+    "Authorization":"Bearer BQAb9QrNfZDsnmT89zGFepg4BLEmRHIWLZsoYaxf0du7pbAIIjTzwqU3wERSI7wjPWQPclzbcLJ63GQ266gbpwYSnGCrYSMYBgY1iJnXXMke1cFYpk-tdfAkPJQ92GTgivXaari0xInp3pYZQy25agIHgjyGETAt8C18GQ30Eajt3fCA5S5Bd6QcE6LGB3ZSoipQqxzmrh2_jbrMpnYSbc0kERMz0xooH3QPQt0URLgzC-pjQCterEsSiqlIimxrmXP_fhvrR15mJwqX1QV0aXAW0WAsLslwLpt6CKt4d4R1"
   },
   connectTimeout:5000,
   receiveTimeout:3000));
@@ -142,6 +147,81 @@ final Dio _dio=Dio(BaseOptions(
     try{
       final response =await _dio6.get("artists/0TnOYISbd1XYRBk9myaseg/albums?include_groups=single%2Cappears_on&market=ES&limit=10&offset=5");
       musicResponse=Music6Response.fromJson(response.data);
+      
+      
+      return musicResponse;
+    }
+    catch(e){
+     
+    }
+     return null;
+  }
+
+//https://developer.spotify.com/console/get-artist-top-tracks/?id=0TnOYISbd1XYRBk9myaseg&market=ES
+//pagetwo
+  final Dio _dio7=Dio(BaseOptions(
+  baseUrl:"https://api.spotify.com/v1/",
+  headers: {
+    "Authorization":"Bearer BQAb9QrNfZDsnmT89zGFepg4BLEmRHIWLZsoYaxf0du7pbAIIjTzwqU3wERSI7wjPWQPclzbcLJ63GQ266gbpwYSnGCrYSMYBgY1iJnXXMke1cFYpk-tdfAkPJQ92GTgivXaari0xInp3pYZQy25agIHgjyGETAt8C18GQ30Eajt3fCA5S5Bd6QcE6LGB3ZSoipQqxzmrh2_jbrMpnYSbc0kERMz0xooH3QPQt0URLgzC-pjQCterEsSiqlIimxrmXP_fhvrR15mJwqX1QV0aXAW0WAsLslwLpt6CKt4d4R1"
+  },
+  connectTimeout:5000,
+  receiveTimeout:3000));
+ 
+  Future<Music7Response?>getCurrent7Data()async{
+    Music7Response musicResponse;
+    try{
+      final response =await _dio7.get("artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=ES");
+      musicResponse=Music7Response.fromJson(response.data);
+      
+      
+      return musicResponse;
+    }
+    catch(e){
+     
+    }
+     return null;
+  }
+
+//https://developer.spotify.com/console/get-new-releases/?country=SE&limit=10&offset=5
+//fourth
+  final Dio _dio8=Dio(BaseOptions(
+  baseUrl:"https://api.spotify.com/v1/",
+  headers: {
+    "Authorization":"Bearer BQBjsSo1jRryxP-B7KJiD_25UvFuirpqk_jRQAYzyjtmPIJmZEPeXz-loD0zvxUIz_F_ZD_ESjrrTClb0Ml29lVMiVa9yLRK_gHdB93dfFdT8G4vFm0btw6TagSH-EZKNzoluI24hLUoZ9aYkUxNiMJdu4uouB8CCtFjZJQxMdeVksmfCkZcpXNS2DQYHUSL2_uJCAiBecoKxdxN0f05xAeefGd_xG1lX1BZZrLfDbYFpMc75Mnpj17pfjjVr9OGK0N_bikDaO8kw1Uy4w9mPFU9rv63GWWjoP7NU31B4RcC"
+  },
+  connectTimeout:5000,
+  receiveTimeout:3000));
+ 
+  Future<Music8Response?>getCurrent8Data()async{
+    Music8Response musicResponse;
+    try{
+      final response =await _dio8.get("browse/new-releases?country=SE&limit=10&offset=5");
+      musicResponse=Music8Response.fromJson(response.data);
+      
+      
+      return musicResponse;
+    }
+    catch(e){
+     
+    }
+     return null;
+  }
+
+//https://developer.spotify.com/console/get-artist-top-tracks/?id=0TnOYISbd1XYRBk9myaseg&market=ES
+//fourth
+  final Dio _dio9=Dio(BaseOptions(
+  baseUrl:"https://api.spotify.com/v1/",
+  headers: {
+    "Authorization":"Bearer BQBjsSo1jRryxP-B7KJiD_25UvFuirpqk_jRQAYzyjtmPIJmZEPeXz-loD0zvxUIz_F_ZD_ESjrrTClb0Ml29lVMiVa9yLRK_gHdB93dfFdT8G4vFm0btw6TagSH-EZKNzoluI24hLUoZ9aYkUxNiMJdu4uouB8CCtFjZJQxMdeVksmfCkZcpXNS2DQYHUSL2_uJCAiBecoKxdxN0f05xAeefGd_xG1lX1BZZrLfDbYFpMc75Mnpj17pfjjVr9OGK0N_bikDaO8kw1Uy4w9mPFU9rv63GWWjoP7NU31B4RcC"
+  },
+  connectTimeout:5000,
+  receiveTimeout:3000));
+ 
+  Future<Music9Response?>getCurrent9Data()async{
+    Music9Response musicResponse;
+    try{
+      final response =await _dio8.get("artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=ES");
+      musicResponse=Music9Response.fromJson(response.data);
       
       
       return musicResponse;

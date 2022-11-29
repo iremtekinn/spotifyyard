@@ -8,6 +8,9 @@ import 'package:flutter_spotify_yard/provider/music3_provider.dart';
 import 'package:flutter_spotify_yard/provider/music4_provider.dart';
 import 'package:flutter_spotify_yard/provider/music5_provider.dart';
 import 'package:flutter_spotify_yard/provider/music6_provider.dart';
+import 'package:flutter_spotify_yard/provider/music7_provider.dart';
+import 'package:flutter_spotify_yard/provider/music8_provider.dart';
+import 'package:flutter_spotify_yard/provider/music9_provider.dart';
 import 'package:flutter_spotify_yard/provider/music_procider.dart';
 import 'package:provider/provider.dart';
 
@@ -20,6 +23,8 @@ void main() {
       ChangeNotifierProvider<Music4Provider>(create:(_)=>Music4Provider() ),
       ChangeNotifierProvider<Music5Provider>(create:(_)=>Music5Provider() ),
       ChangeNotifierProvider<Music6Provider>(create:(_)=>Music6Provider() ),
+      ChangeNotifierProvider<Music8Provider>(create:(_)=>Music8Provider() ),ChangeNotifierProvider<Music7Provider>(create:(_)=>Music7Provider() ),
+      ChangeNotifierProvider<Music9Provider>(create:(_)=>Music9Provider() ),
 
     ],child:const MyApp())
     );
@@ -46,7 +51,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Pagetwo(),
+      home: const Fourth(),
     );
   }
 }

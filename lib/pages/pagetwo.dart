@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 
 import '../provider/music5_provider.dart';
 import '../provider/music6_provider.dart';
+import '../provider/music7_provider.dart';
 
 class Pagetwo extends StatefulWidget {
   const Pagetwo({super.key});
@@ -22,6 +23,7 @@ class _PagetwoState extends State<Pagetwo> {
     // TODO: implement initState
     Provider.of<Music5Provider>(context,listen: false).getMusic5Data(context);
     Provider.of<Music6Provider>(context,listen: false).getMusic6Data(context);
+     Provider.of<Music7Provider>(context,listen: false).getMusic7Data(context);
     super.initState();
   }
   
@@ -164,44 +166,52 @@ class _PagetwoState extends State<Pagetwo> {
                 )
               ),
               BounceInDown(duration: Duration(seconds: 5),
-                child: Container(
-                  width:double.infinity,
-                  height: 200,
-                 // color:Colors.red,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 20,left:20,),
-                    child: ListView.builder(itemCount:8,
-                    scrollDirection: Axis.vertical, itemBuilder: (context, index) {
-                      return Row(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color:Color(0xffE6E6E6),
-                              ),
-                            width:30,
-                            height: 30,
-                            
-                            child:Icon(Icons.play_arrow)
-                          ),
-                          SizedBox(width:15),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                 Text("Don't smile at me",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 16)),
-                                 Text("Billie Eilish")
-                              ],
+                child: Consumer(
+                  builder:(context,Music7Provider a7,child)=>a7.isLoading==true?CircularProgressIndicator():
+                  //child: 
+                  Container(
+                    width:double.infinity,
+                    height: 200,
+                   // color:Colors.red,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 20,left:20,),
+                      child: ListView.builder(itemCount:a7.response?.tracks?.length,
+                      scrollDirection: Axis.vertical, itemBuilder: (context, index) {
+                        return Row(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color:Color(0xffE6E6E6),
+                                ),
+                              width:30,
+                              height: 30,
+                              
+                              child:Icon(Icons.play_arrow)
                             ),
-                          ),
-                          SizedBox(width:30),
-                          Text("5.33"),
-                          SizedBox(width:80),
-                          Image.asset("assets/heart.png")
-                        ],
-                      );
-                    },
+                            SizedBox(width:15),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                   //Text("Don't smile at me",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 16)),
+                                   Text(a7.response!.tracks![index].artists![0].name.toString(),style:TextStyle(fontWeight: FontWeight.bold,fontSize: 16)),
+                                   //Text("Billie Eilish")
+                                   Container(height: 20,
+                                   width: 180,
+                                    child: Text(a7.response!.tracks![index].name.toString(),overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12),))
+                                ],
+                              ),
+                            ),
+                            SizedBox(width:30),
+                            //Text("5.33"),
+                            SizedBox(width:80),
+                            //Image.asset("assets/heart.png")
+                          ],
+                        );
+                      },
+                      ),
                     ),
                   ),
                 ),
